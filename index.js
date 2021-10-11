@@ -10,5 +10,6 @@ let onDataRecieved = (data) => {
 }
 
 btn.addEventListener("click", () => {
-  click(input.value, onDataRecieved)
+  const promise = click(input.value);
+  promise.then(onDataRecieved)
 });
